@@ -115,7 +115,7 @@ export function handleWheelZoom(event) {
   event.preventDefault();
   event.stopPropagation();
 
-  const delta = getDelta(event, null);
+  const delta = getDelta(event, null) * 2;
   const newScale = handleCalculateZoom.call(this, delta, step, !event.ctrlKey);
 
   // if scale not change
