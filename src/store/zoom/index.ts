@@ -239,7 +239,7 @@ export function handleDoubleClick(event) {
   if (mode === "reset") {
     return resetTransformations.call(this, event, animationTime);
   }
-  const delta = mode === "zoomOut" ? -1 : 1;
+  const delta = scale > 1 ? -1 : 1;
   const newScale = handleCalculateZoom.call(this, delta, step);
 
   const { mouseX, mouseY } = wheelMousePosition(event, contentComponent, scale);
